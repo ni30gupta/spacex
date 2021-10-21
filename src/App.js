@@ -1,17 +1,26 @@
 import React from "react";
-import Latest from "./Latest";
+import Latest from "./Upcoming";
 import Past from "./Past";
-import Upcoming from "./Upcoming";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Upcoming from "./Latest";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Latest />
-      <Upcoming />
-      <Past />
-      <Button />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/latest">
+            <Latest />
+          </Route>
+          <Route path="/upcoming">
+            <Upcoming />
+          </Route>
+          <Route path="/past">
+            <Past />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
