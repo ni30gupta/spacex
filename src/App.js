@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { Container, Nav } from "react-bootstrap";
 import Header from "./Header";
+import Rocket from "./Rocket";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/past">
             <Past />
+          </Route>
+          <Route path="/launch/id:">
+            <Rocket />
           </Route>
         </Switch>
       </div>

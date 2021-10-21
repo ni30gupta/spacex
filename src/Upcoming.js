@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Nav, Table } from "react-bootstrap";
 
 function Upcoming() {
   const [launch, setLaunch] = useState([]);
@@ -30,10 +30,12 @@ function Upcoming() {
                 <td>{item.flight_number}</td>
                 <td>
                   {" "}
-                  <img
-                    src={item.links.patch.small}
-                    alt={item.links.patch.small}
-                  />{" "}
+                  <Nav.Link href="/launch">
+                    <img
+                      src={item.links.patch.small}
+                      alt={item.links.patch.small}
+                    />{" "}
+                  </Nav.Link>
                 </td>
                 <td>{item.details}</td>
               </tr>
