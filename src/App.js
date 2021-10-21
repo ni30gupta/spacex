@@ -1,15 +1,27 @@
 import React from "react";
-import Latest from "./Upcoming";
+import Upcoming from "./Upcoming";
 import Past from "./Past";
-import Upcoming from "./Latest";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Latest from "./Latest";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
+import { Container, Nav } from "react-bootstrap";
+import Header from "./Header";
 
 function App() {
   return (
     <Router>
       <div>
+        <Header />
         <Switch>
           <Route path="/latest">
+            <Latest />
+          </Route>
+          <Route path="/" exact>
             <Latest />
           </Route>
           <Route path="/upcoming">
@@ -21,6 +33,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    // <Header />
   );
 }
 
