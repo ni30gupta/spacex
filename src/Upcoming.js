@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Nav, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Upcoming() {
   const [launch, setLaunch] = useState([]);
@@ -30,12 +31,19 @@ function Upcoming() {
                 <td>{item.flight_number}</td>
                 <td>
                   {" "}
-                  <Nav.Link href="/launch">
+                  <Link
+                    to={{
+                      pathname: `/launch/${item.id}`,
+                      state: {
+                        launchDetails: item,
+                      },
+                    }}
+                  >
                     <img
                       src={item.links.patch.small}
                       alt={item.links.patch.small}
                     />{" "}
-                  </Nav.Link>
+                  </Link>
                 </td>
                 <td>{item.details}</td>
               </tr>

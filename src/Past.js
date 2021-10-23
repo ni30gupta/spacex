@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Past() {
   const [launch, setLaunch] = useState([]);
   useEffect(() => {
     fetch("https://api.spacexdata.com/v5/launches/past")
       .then((resp) => resp.json())
-      .then((data) => {
-        let newArr = data.reverse();
-        return setLaunch(newArr);
+      .then((raw_data) => {
+        let data = raw_data.reverse();
+        return setLaunch(data);
       });
   }, []);
   console.log(launch);
@@ -18,7 +19,7 @@ function Past() {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Launching On</th>
+            <th>Launched On</th>
             <th>Flight No.</th>
             <th>Image</th>
             <th>Details</th>
@@ -33,10 +34,19 @@ function Past() {
                 <td>{item.flight_number}</td>
                 <td>
                   {" "}
-                  <img
-                    src={item.links.patch.small}
-                    alt={item.links.patch.small}
-                  />{" "}
+                  <Link
+                    to={{
+                      pathname: `/launch/${item.id}`,
+                      state: {
+                        launchDetails: item,
+                      },
+                    }}
+                  >
+                    <img
+                      src={item.links.patch.small}
+                      alt={item.links.patch.small}
+                    />{" "}
+                  </Link>
                 </td>
                 <td>{item.details}</td>
               </tr>
