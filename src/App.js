@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/" component={Latest} />
           <Route exact path="/latest" component={Latest} />
           <Route exact path="/upcoming" component={Upcoming} />
           <Route exact path="/past" component={Past} />
