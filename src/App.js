@@ -1,30 +1,17 @@
-import React from "react";
-import Upcoming from "./Upcoming";
-import Past from "./Past";
-import Latest from "./Latest";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Header";
-import Rocket from "./Rocket";
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import First from "./component/First";
+import Second from "./component/Second";
+import Third from "./component/Third";
 
-function App() {
-  return (
-    <div>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Latest} />
-          <Route exact path="/latest" component={Latest} />
-          <Route exact path="/upcoming" component={Upcoming} />
-          <Route exact path="/past" component={Past} />
-          <Route
-            exact
-            path="/launch/:id"
-            component={(rest) => <Rocket name="nitish" {...rest} />}
-          />
-        </Switch>
-      </Router>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <First />
+        <Second />
+        <Third />
+      </>
+    );
+  }
 }
-
-export default App;

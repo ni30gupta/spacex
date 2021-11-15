@@ -1,0 +1,22 @@
+.main2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-size: cover;
+  background-image: url("/src/images/MX-Interior-Hero-Desktop.jpg");
+}
+.blank {
+  background-color: black;
+  height: 15vh;
+}
+.blank h1 {
+  position: relative;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  top: 30px;
+  text-align: center;
+}
