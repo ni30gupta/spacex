@@ -1,0 +1,22 @@
+.main_fifth {
+  display: flex;
+  background-size: cover;
+  background-image: url("/src/images/MX-Performance-Hero-Desktop.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.space_btn1 {
+  padding: 6px 30px;
+  border-radius: 25px;
+  border: 3px black solid;
+  background-color: Transparent;
+  color: black;
+  font-weight: 600;
+}
+.space_btn1:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
