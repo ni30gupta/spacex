@@ -7,7 +7,7 @@ function Seventh() {
     <div>
       <Container fluid>
         <Row className="d-flex justify-content-between">
-          <Col lg={4} style={{ padding: "1.5rem" }}>
+          <Col lg={3} xs={12} style={{ padding: "1.5rem" }}>
             <h5>Utility</h5>
             <h3>Even More Capable</h3>
             <p
@@ -29,7 +29,7 @@ function Seventh() {
               </div>
             </div>
           </Col>
-          <Col lg={8} style={{ padding: 0 }}>
+          <Col lg={9} xs={12} style={{ paddingLeft: "10px" }}>
             <div className="wrapper_7">
               <ul>
                 <li>

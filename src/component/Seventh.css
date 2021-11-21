@@ -14,3 +14,11 @@
   position: relative;
   top: 30rem;
 }
+.wrapper {
+  /* height: 100%; */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/src/images/MX-Range-Hero-Desktop.jpg");
+}

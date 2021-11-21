@@ -1,0 +1,33 @@
+.main_11 {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rem;
+  width: 68vw;
+  padding-bottom: 2rem;
+}
+
+.road_data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+.road_main {
+  /* width: 60vw; */
+  justify-content: center;
+  display: flex;
+}
+.road_list {
+  padding: 1rem;
+  border: 3px solid black;
+  height: 27vh;
+  width: 23%;
+  padding-bottom: 0;
+  /* color: rgba(57, 60, 65, 0);
+  color: rgba(24, 27, 33, 0); */
+}
+
+.road_list h3 {
+  margin-top: 3rem;
+}
