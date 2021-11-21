@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Col, Row } from "react-bootstrap";
+=======
+import {  Col, Row } from "react-bootstrap";
+>>>>>>> d9baab3d72109312804d0aeb81c74c9eae4741bb
 import "./Fifth.css";
 function Fifth() {
   return (
